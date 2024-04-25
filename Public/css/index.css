@@ -1,0 +1,5 @@
+.contactUsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+}
