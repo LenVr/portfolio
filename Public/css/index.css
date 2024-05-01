@@ -171,3 +171,26 @@ body {
 #bot {
     border-radius: 50%;
 }
+
+/* Project style */
+
+
+.projectsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.prjImgContainer {
+    width: 300px;
+    height: 300px;
+
+    border-radius: 5px;
+}
+
+.prjImgContainer img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
