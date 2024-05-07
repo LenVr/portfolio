@@ -197,7 +197,7 @@ body {
 }
 
 .prjImgContainer img {
-    width: 20vw;
+    width: 90%;
     height: 300px;
     border-radius: 10px;
 }
