@@ -196,6 +196,10 @@ body {
     border-radius: 5px;
 }
 
+.prjImgContainer:hover {
+    cursor: pointer;
+}
+
 .prjImgContainer img {
     width: 90%;
     height: 300px;
@@ -213,6 +217,11 @@ body {
 
 .prjContainer {
     margin: 10px;
+    transition: transform 0.5s ease;
+}
+
+.prjContainer:hover {
+    transform: scale(1.09);
 }
 
 /* Starting Project styles */
