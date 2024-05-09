@@ -1,5 +1,5 @@
 import { showProject } from "../index.js";
-import { ASSISTANT, FACTURATION, MEMORY, PINPONG, WANO } from "../libs/constantes.js";
+import { ASSISTANT, FACTURATION, MEMORY, PINPONG, WANO, CLOSE } from "../libs/constantes.js";
 import { div } from "../libs/html.js";
 
 const wano = document.getElementById('prj1');
@@ -7,7 +7,7 @@ const pingPong = document.getElementById('prj2');
 const memory = document.getElementById('prj3');
 const facturation = document.getElementById('prj4');
 const assistant = document.getElementById('prj5');
-const modalContainer = document.getElementById('modalContainer')
+const fadeContainer = document.getElementById('fadeContainer');
 
 
 
@@ -31,9 +31,24 @@ assistant.addEventListener('click', () => {
     showProject(ASSISTANT);
 });
 
+fadeContainer.addEventListener('click', () => {
+    showProject(CLOSE);
+});
+
+
+
+export function closeContainer() {
+
+    fadeContainer.innerHTML = '';
+    fadeContainer.className = 'none';
+    document.body.style.overflow = 'auto';
+}
+
 export function showWanoProject() {
 
-    const fade = div(modalContainer, { className: 'fade' });
-    const elementContainer = div(fade, { className: 'elementContainer' });
+    fadeContainer.className = 'fadeContainer';
+    document.body.style.overflow = 'hidden';
+
+    const elementContainer = div(fadeContainer, { className: 'elementContainer' });
 
 }
