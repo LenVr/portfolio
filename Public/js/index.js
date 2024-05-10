@@ -1,4 +1,4 @@
-import { closeContainer, showWanoProject } from "./controllers/projects.js";
+import { showWanoProject, showPingPongProject, showMemoryGame, showFacturactionProject, showAssistantProject } from "./controllers/projects.js";
 import { ASSISTANT, FACTURATION, MEMORY, PINPONG, WANO, CLOSE } from "./libs/constantes.js";
 
 

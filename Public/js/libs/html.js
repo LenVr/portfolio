@@ -14,6 +14,10 @@ export const input = function (parent, attributes) {
     return createElement('input', parent, attributes);
 }
 
+export const i = function (parent, attributes) {
+    return createElement('i', parent, attributes);
+}
+
 const createElement = function (type, parent, attributes) {
     let element = document.createElement(type);
     parent.appendChild(element);
