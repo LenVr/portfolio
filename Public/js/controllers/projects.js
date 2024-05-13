@@ -66,9 +66,9 @@ export function showMemoryGame() {
 }
 
 export function showFacturactionProject() {
-    const { fade, elementContainer, equis } = createProjectContainer('Facturation System', 'A billing system made for an English academy, this system was created using Javascript vanilla, css and HTML and works with a SQL database.', '/Public/assets/CALogo2.png', 'Private project');
+    const { fade, elementContainer, equis } = createProjectContainer('Facturation System', 'A billing system made for an English academy, this system was created using Javascript vanilla, css and HTML and works with a SQL database.', '/Public/assets/CALogo2.png', 'Private project', '#');
 }
 
 export function showAssistantProject() {
-    const { fade, elementContainer, equis } = createProjectContainer('Discord Bot Assistant', 'A Discord virtual assistant, capable of assisting teachers and students of a virtual academy. It can show the time and provide general information related to the academy. This assistant works with DiscordJs and MongoDB as its database.', '/Public/assets/asistenteVirtual.png', 'Private project');
+    const { fade, elementContainer, equis } = createProjectContainer('Discord Bot Assistant', 'A Discord virtual assistant, capable of assisting teachers and students of a virtual academy. It can show the time and provide general information related to the academy. This assistant works with DiscordJs and MongoDB as its database.', '/Public/assets/asistenteVirtual.png', 'Private project', '#');
 }
