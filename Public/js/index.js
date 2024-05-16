@@ -1,5 +1,6 @@
 import { showWanoProject, showPingPongProject, showMemoryGame, showFacturactionProject, showAssistantProject } from "./controllers/projects.js";
-import { ASSISTANT, FACTURATION, MEMORY, PINPONG, WANO, CLOSE } from "./libs/constantes.js";
+import { showContactForm } from "./controllers/contactMe.js"
+import { ASSISTANT, FACTURATION, MEMORY, PINPONG, WANO, CLOSE, CONTACT } from "./libs/constantes.js";
 
 
 export function showProject(type) {
@@ -18,6 +19,9 @@ export function showProject(type) {
             break;
         case ASSISTANT:
             showAssistantProject()
+            break;
+        case CONTACT:
+            showContactForm();
             break;
         case CLOSE:
             closeContainer();
