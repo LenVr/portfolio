@@ -7,7 +7,7 @@
     bottom: 25%;
     left: 25%;
 
-    background-color: white;
+    background: linear-gradient(120deg, rgb(110, 223, 255), #005C82);
 
     border-radius: 10px;
 
@@ -18,4 +18,36 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+.contactFormContainer p {
+    margin-top: 20px;
+    color: white;
+}
+
+.contactFormContainer input {
+    border-radius: 8px;
+    border-color: transparent;
+
+    background-color: white;
+}
+
+.contactFormContainer button {
+    height: 50px;
+    margin-top: 20px;
+
+    border-radius: 10px;
+    border: 1px solid white;
+
+    background: linear-gradient(to right, #005C82 30%, transparent 50%);
+    background-size: 300px;
+    background-position: left;
+    transition: background-position 0.9s;
+
+    color: white;
+}
+
+.contactFormContainer button:hover {
+    background-position: right;
 }

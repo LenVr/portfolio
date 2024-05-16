@@ -309,6 +309,26 @@ body {
     transform: scale(1.09);
 }
 
+.contactInfo {
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 20px;
+}
+
+.contactInfo p {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.contactInfo i {
+    font-size: 30px;
+}
+
 /* media queries */
 
 @media (max-width: 768px) {
