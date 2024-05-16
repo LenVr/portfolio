@@ -54,21 +54,21 @@ function createProjectContainer(projectName, text, imgSrc, btnTxt, link) {
 }
 
 export function showWanoProject() {
-    const { fade, elementContainer, equis } = createProjectContainer('Wano', 'Wano is able to use OpenAI, that way users can use ChatGPT and ask questions or requests. It has a welcome system capable of welcoming new members to a Discord server. Wano works with MongoDB and DiscordJs.', '/Public/assets/WanoWeb.jpg', 'Visit Wano website', 'https://lenvr.github.io/WanoWeb/');
+    const { fade, elementContainer, equis } = createProjectContainer('Wano', 'Wano is able to use OpenAI, that way users can use ChatGPT and ask questions or requests. It has a welcome system capable of welcoming new members to a Discord server. Wano works with MongoDB and DiscordJs.', 'Public/assets/WanoWeb.jpg', 'Visit Wano website', 'https://lenvr.github.io/WanoWeb/');
 }
 
 export function showPingPongProject() {
-    const { fade, elementContainer, equis } = createProjectContainer('Ping Pong Game', `A retro-style ping pong video game in which you can challenge your friends or family on the same computer, in pure 80's style. This game was created with Object-oriented programming using Javascript vanilla.`, '/Public/assets/pinpongIcon.png', `Let's play`, 'https://lenvr.github.io/PingPongGame/');
+    const { fade, elementContainer, equis } = createProjectContainer('Ping Pong Game', `A retro-style ping pong video game in which you can challenge your friends or family on the same computer, in pure 80's style. This game was created with Object-oriented programming using Javascript vanilla.`, 'Public/assets/pinpongIcon.png', `Let's play`, 'https://lenvr.github.io/PingPongGame/');
 }
 
 export function showMemoryGame() {
-    const { fade, elementContainer, equis } = createProjectContainer('Memory game', `A memory video game, it's good to train your mind! You can leave your mark because it has a scoring system. This game was created with Object-oriented programming using Javascript vanilla and works with Firebase as a NoSQL database.`, '/Public/assets/memoryGameTitle.png', `Let's play`, 'https://brandonvillalobosmemorygame.web.app');
+    const { fade, elementContainer, equis } = createProjectContainer('Memory game', `A memory video game, it's good to train your mind! You can leave your mark because it has a scoring system. This game was created with Object-oriented programming using Javascript vanilla and works with Firebase as a NoSQL database.`, 'Public/assets/memoryGameTitle.png', `Let's play`, 'https://brandonvillalobosmemorygame.web.app');
 }
 
 export function showFacturactionProject() {
-    const { fade, elementContainer, equis } = createProjectContainer('Facturation System', 'A billing system made for an English academy, this system was created using Javascript vanilla, css and HTML and works with a SQL database.', '/Public/assets/CALogo2.png', 'Private project', '#');
+    const { fade, elementContainer, equis } = createProjectContainer('Facturation System', 'A billing system made for an English academy, this system was created using Javascript vanilla, css and HTML and works with a SQL database.', 'Public/assets/CALogo2.png', 'Private project', '#');
 }
 
 export function showAssistantProject() {
-    const { fade, elementContainer, equis } = createProjectContainer('Discord Bot Assistant', 'A Discord virtual assistant, capable of assisting teachers and students of a virtual academy. It can show the time and provide general information related to the academy. This assistant works with DiscordJs and MongoDB as its database.', '/Public/assets/asistenteVirtual.png', 'Private project', '#');
+    const { fade, elementContainer, equis } = createProjectContainer('Discord Bot Assistant', 'A Discord virtual assistant, capable of assisting teachers and students of a virtual academy. It can show the time and provide general information related to the academy. This assistant works with DiscordJs and MongoDB as its database.', 'Public/assets/asistenteVirtual.png', 'Private project', '#');
 }
