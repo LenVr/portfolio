@@ -1,5 +1,5 @@
-import { div } from "./libraries/html.js"
+import { AppManager } from "./appManager.js";
 
-window.onload(() => {
-    let div = null;
-})
+window.onload = () => {
+    let appManager = new AppManager();
+};
