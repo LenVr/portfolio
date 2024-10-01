@@ -14,7 +14,7 @@ export class CharacterView extends View {
         this.container.className = 'characterAppearance';
         this.container.id = 'mainCharacter';
 
-        this.container.style.position = 'fixed';
+        this.container.style.position = 'absolute';
         this.container.style.left = this.x + 'px';
 
         this.addKeyboardControls();
@@ -27,10 +27,12 @@ export class CharacterView extends View {
 
     handleKeyDown(e) {
         switch (e.key) {
-            case 'ArrowLeft':
+            case 'a':
+            case 'A':
                 this.left();
                 break;
-            case 'ArrowRight':
+            case 'd':
+            case 'D':
                 this.right();
                 break;
         }
@@ -38,8 +40,10 @@ export class CharacterView extends View {
 
     handleKeyUp(e) {
         switch (e.key) {
-            case 'ArrowLeft':
-            case 'ArrowRight':
+            case 'a':
+            case 'd':
+            case 'A':
+            case 'D':
                 this.freeze();
                 break;
         }
@@ -51,29 +55,32 @@ export class CharacterView extends View {
                 this.x -= this.speed;
                 if (this.x < 0) {
                     this.x = 0;
-                    this.freeze()
+                    this.controller.moveLeft();
+                    this.freeze();
                 }
                 this.container.style.left = this.x + "px";
-            }, 20)
+            }, 20);
         }
-    };
+    }
 
     right() {
         if (!this.movement) {
             this.movement = setInterval(() => {
                 this.x += this.speed;
-                const limit = document.body.clientWidth - this.width
+                const limit = document.body.clientWidth - this.width;
                 if (this.x > limit) {
                     this.x = limit;
+                    this.controller.moveRight()
                     this.freeze();
                 }
+
                 this.container.style.left = this.x + "px";
-            }, 20)
+            }, 20);
         }
     }
 
     freeze() {
         clearInterval(this.movement);
         this.movement = undefined;
-    };
+    }
 }

@@ -1,7 +1,8 @@
 import { div } from "./../libraries/html.js"
 
 export class View {
-    constructor(parent) {
+    constructor(parent, controller) {
+        this.controller = controller;
         this.parent = parent;
         this.container = div(parent, null)
     }

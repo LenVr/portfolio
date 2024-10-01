@@ -1,0 +1,7 @@
+.portfolioController {
+    width: 200vw;
+    height: 100vh;
+
+    background: radial-gradient(black, rgb(0, 8, 2));
+    overflow-x: hidden;
+}
