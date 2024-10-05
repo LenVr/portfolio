@@ -90,14 +90,8 @@ kbd {
     cursor: pointer;
 }
 
-.welcomeMsg {
+.aboutMeContainer {
     color: white;
-    font-size: 8vw;
-}
-
-.personalContainer {
-    color: white;
-    width: 55vw;
     height: 100%;
     position: absolute;
     right: -50vw;
@@ -105,10 +99,40 @@ kbd {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
+}
+
+.aboutMeImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutMeImg {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+}
+
+.welcomeMsg {
+    color: white;
+    font-size: 8vw;
+}
+
+.aboutMeTextContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
+
 .aboutInformation {
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
+}
+
+.aboutMeImg {
+    width: 30vw;
+    height: 30vw;
 }
