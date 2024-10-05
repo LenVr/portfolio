@@ -16,8 +16,11 @@ export class PortfolioView extends ViewEnhanced {
 
         this.welcomeContainer = div(this.container, { className: 'welcomeContainer' })
         this.welcomeTitle = p(this.welcomeContainer, { className: 'welcomeTitle' });
-        this.instructions = p(this.welcomeContainer, { className: 'instructions' })
-        this.instructionsMobile = p(this.welcomeContainer, { className: 'instructionsMobile' })
+        this.instructions = p(this.welcomeContainer, { className: 'instructions' });
+        this.instructionsMobile = p(this.welcomeContainer, { className: 'instructionsMobile' });
+
+        this.personalContainer = div(this.container, { className: 'personalContainer' });
+        this.personalInformation = p(this.personalContainer, { className: 'personalInformation', textContent: 'hi' })
 
         this.writing = true;
         this.index = 0
