@@ -1,16 +1,15 @@
-import { View } from "../../view/view.js";
+import { ViewEnhanced } from "../../view/viewEnhanced.js";
 
 
-export class CharacterView extends View {
+export class CharacterView extends ViewEnhanced {
 
     x = 50;
     speed = 25;
     movement;
-    width = 3;
+    width = 10;
 
     constructor(controller, parent) {
-        super(parent);
-        this.controller = controller;
+        super(controller, parent);
         this.container.className = 'characterAppearance';
         this.container.id = 'mainCharacter';
 
@@ -55,10 +54,11 @@ export class CharacterView extends View {
                 this.x -= this.speed;
                 if (this.x < 0) {
                     this.x = 0;
-                    this.controller.moveLeft();
+                    this.moveLeft();
                     this.freeze();
                 }
                 this.container.style.left = this.x + "px";
+                this.checkBounds();
             }, 20);
         }
     }
@@ -70,11 +70,12 @@ export class CharacterView extends View {
                 const limit = document.body.clientWidth - this.width;
                 if (this.x > limit) {
                     this.x = limit;
-                    this.controller.moveRight()
+                    this.moveRight()
                     this.freeze();
                 }
 
                 this.container.style.left = this.x + "px";
+                this.checkBounds();
             }, 20);
         }
     }
@@ -82,5 +83,28 @@ export class CharacterView extends View {
     freeze() {
         clearInterval(this.movement);
         this.movement = undefined;
+    }
+
+    moveRight() {
+        this.controller.appManager.movementRightHandler()
+    }
+
+    moveLeft() {
+        this.controller.appManager.movementLeftHandler()
+    }
+
+    checkBounds() {
+        const characterRect = this.container.getBoundingClientRect();
+        const windowWidth = window.innerWidth;
+
+        // Si el personaje se acerca al borde derecho
+        if (characterRect.right > windowWidth * 0.8) {  // Ajusta el valor según el margen que quieras
+            this.moveRight();  // Llamar al handler del PortfolioView para mover la pantalla
+        }
+
+        // Si el personaje se acerca al borde izquierdo
+        if (characterRect.left < windowWidth * 0.2) {  // Ajusta el valor según el margen que quieras
+            this.moveLeft();  // Llamar al handler del PortfolioView para mover la pantalla
+        }
     }
 }

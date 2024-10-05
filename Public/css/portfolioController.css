@@ -1,7 +1,48 @@
 .portfolioController {
-    width: 200vw;
+    width: 100vw;
     height: 100vh;
 
-    background: radial-gradient(black, rgb(0, 8, 2));
+    background: radial-gradient(rgb(17, 17, 17), rgb(0, 0, 0));
+
+    position: fixed;
     overflow-x: hidden;
+    white-space: nowrap;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcomeContainer {
+    width: 25%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcomeTitle {
+    color: white;
+    font-size: 5vw;
+}
+
+.instructions {
+    color: white;
+    font-size: 2vw;
+}
+
+.instructionsMobile {
+    color: white;
+    font-size: 1.5vw;
+}
+
+kbd {
+    background-color: rgb(36, 35, 35);
+    padding: 10px;
+    border: 4px;
+    border-radius: 5px;
+    box-shadow: -1px -2px 1px rgb(112, 112, 112);
+    cursor: pointer;
 }

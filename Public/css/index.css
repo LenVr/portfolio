@@ -1,13 +1,10 @@
 body {
     margin: 0;
-    width: 190vw;
-    overflow-x: scroll;
-    white-space: nowrap;
+    width: 200vw;
 }
 
 .mainContainer,
 .controllerContainer {
     width: 200vw;
-    overflow-x: scroll;
     white-space: nowrap;
 }

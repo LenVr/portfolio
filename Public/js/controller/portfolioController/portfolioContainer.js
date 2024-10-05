@@ -8,6 +8,7 @@ export class PortfolioController extends Controller {
     }
 
     moveRight() {
+        console.log('movement desde Portfolio controller')
         this.view.moveRight()
     }
 
