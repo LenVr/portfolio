@@ -1,3 +1,4 @@
+import { LEFT, RIGHT } from "../../libraries/constants.js";
 import { div, p } from "../../libraries/html.js";
 import { ViewEnhanced } from "../../view/viewEnhanced.js";
 import { CharacterController } from "../character/characterController.js";
@@ -9,6 +10,9 @@ export class PortfolioView extends ViewEnhanced {
         this.container.className = 'portfolioController';
         this.character = new CharacterController(this, this.container);
         this.scrollAmount = 25;
+
+        this.leftButton = div(this.container, { className: 'leftButton', onmousedown: this.onLeftButton.bind(this), onmouseup: this.upLeftButton.bind(this) })
+        this.rightButton = div(this.container, { className: 'rightButton', onmousedown: this.onRightButton.bind(this), onmouseup: this.upRightButton.bind(this) })
 
         this.welcomeContainer = div(this.container, { className: 'welcomeContainer' })
         this.welcomeTitle = p(this.welcomeContainer, { className: 'welcomeTitle' });
@@ -45,4 +49,21 @@ export class PortfolioView extends ViewEnhanced {
             this.instructionsMobile.innerHTML = 'If you are in a mobile, touch the border left or right'
         }
     }
+
+    onRightButton() {
+        this.character.view.mobileButton(RIGHT)
+    }
+
+    onLeftButton() {
+        this.character.view.mobileButton(LEFT)
+    }
+
+    upRightButton() {
+        this.character.view.mobileButtonUp(RIGHT)
+    }
+
+    upLeftButton() {
+        this.character.view.mobileButtonUp(LEFT)
+    }
+
 }

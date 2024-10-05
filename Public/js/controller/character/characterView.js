@@ -1,3 +1,4 @@
+import { LEFT, RIGHT } from "../../libraries/constants.js";
 import { ViewEnhanced } from "../../view/viewEnhanced.js";
 
 
@@ -45,6 +46,23 @@ export class CharacterView extends ViewEnhanced {
             case 'D':
                 this.freeze();
                 break;
+        }
+    }
+
+    mobileButton(e) {
+        switch (e) {
+            case LEFT:
+                this.left();
+            case RIGHT:
+                this.right();
+        }
+    }
+
+    mobileButtonUp(e) {
+        switch (e) {
+            case LEFT:
+            case RIGHT:
+                this.freeze()
         }
     }
 

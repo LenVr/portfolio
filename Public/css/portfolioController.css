@@ -13,6 +13,41 @@
     align-items: center;
 }
 
+/* buttons */
+
+.leftButton {
+    position: fixed;
+    left: 0;
+    width: 5%;
+    height: 100%;
+
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightButton {
+    position: fixed;
+    right: 0;
+    width: 5%;
+    height: 100%;
+
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightButton:hover {
+    cursor: pointer;
+}
+
+/* buttons */
+
+
 .welcomeContainer {
     width: 25%;
     height: 100%;
