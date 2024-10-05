@@ -1,6 +1,9 @@
 body {
     margin: 0;
     width: 200vw;
+
+    user-select: none;
+    font-family: "Afacad Flux", sans-serif;
 }
 
 .mainContainer,

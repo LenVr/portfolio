@@ -15,12 +15,14 @@ export class PortfolioView extends ViewEnhanced {
         this.rightButton = div(this.container, { className: 'rightButton', onmousedown: this.onRightButton.bind(this), onmouseup: this.upRightButton.bind(this) })
 
         this.welcomeContainer = div(this.container, { className: 'welcomeContainer' })
-        this.welcomeTitle = p(this.welcomeContainer, { className: 'welcomeTitle' });
+        this.nameContainer = div(this.welcomeContainer, { className: 'nameContainer' })
+        this.welcomeTitle = p(this.nameContainer, { className: 'welcomeTitle' });
         this.instructions = p(this.welcomeContainer, { className: 'instructions' });
         this.instructionsMobile = p(this.welcomeContainer, { className: 'instructionsMobile' });
 
         this.personalContainer = div(this.container, { className: 'personalContainer' });
-        this.personalInformation = p(this.personalContainer, { className: 'personalInformation', textContent: 'hi' })
+        this.welcomeMsg = div(this.personalContainer, { className: 'welcomeMsg', textContent: 'Welcome' })
+        this.aboutInformation = p(this.personalContainer, { className: 'aboutInformation', innerHTML: `I'm a passionate web developer based in Costa Rica <br> Someone whole LOVES technology and science, I also love <br> One Piece and Bikes, but I won't tell you my secrets` })
 
         this.writing = true;
         this.index = 0
