@@ -136,3 +136,17 @@ kbd {
     width: 30vw;
     height: 30vw;
 }
+
+/* portal container */
+
+.portal {
+    width: 100px;
+    height: 100%;
+
+    position: absolute;
+    right: -60vw;
+
+    background-color: white;
+
+    clip-path: polygon(82% 0, 73% 16%, 76% 65%, 72% 83%, 93% 100%, 50% 100%, 24% 100%, 35% 74%, 48% 40%, 7% 0);
+}

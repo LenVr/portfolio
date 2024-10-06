@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    width: 200vw;
+    width: 400vw;
 
     user-select: none;
     font-family: "Afacad Flux", sans-serif;
@@ -10,4 +10,15 @@ body {
 .controllerContainer {
     width: 200vw;
     white-space: nowrap;
+}
+
+.cursor {
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    pointer-events: none;
+    box-shadow: 10px 8px 200px 44px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: 10px 8px 200px 44px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: 10px 8px 200px 44px rgba(255, 255, 255, 0.75);
+    transform: translate(-50%, -50%);
 }

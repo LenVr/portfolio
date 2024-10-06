@@ -11,6 +11,9 @@ export class PortfolioView extends ViewEnhanced {
         this.character = new CharacterController(this, this.container);
         this.scrollAmount = 25;
 
+        this.cursor = div(this.container, { className: 'cursor' })
+        this.cursorMovement()
+
         this.welcomeContainer = div(this.container, { className: 'welcomeContainer' })
         this.nameContainer = div(this.welcomeContainer, { className: 'nameContainer' })
         this.welcomeTitle = p(this.nameContainer, { className: 'welcomeTitle' });
@@ -23,6 +26,8 @@ export class PortfolioView extends ViewEnhanced {
         this.aboutMeTextContainer = div(this.aboutMeContainer, { className: 'aboutMeTextContainer' })
         this.welcomeMsg = div(this.aboutMeTextContainer, { className: 'welcomeMsg', textContent: 'Welcome' });
         this.aboutInformation = p(this.aboutMeTextContainer, { className: 'aboutInformation', innerHTML: `I'm a passionate web developer based in Costa Rica <br> Someone whole LOVES videogames, technology and science, I also <br> love One Piece and Bikes, but I won't tell you my secrets` });
+
+        this.portal = div(this.container, { className: 'portal' })
 
 
         this.leftButton = div(this.container, { className: 'leftButton', onmousedown: this.onLeftButton.bind(this), onmouseup: this.upLeftButton.bind(this) })
@@ -74,6 +79,13 @@ export class PortfolioView extends ViewEnhanced {
 
     upLeftButton() {
         this.character.view.mobileButtonUp(LEFT)
+    }
+
+    cursorMovement() {
+        document.addEventListener('mousemove', (e) => {
+            this.cursor.style.left = `${e.pageX}px`;
+            this.cursor.style.top = `${e.pageY}px`;
+        });
     }
 
 }
