@@ -115,14 +115,12 @@ export class CharacterView extends ViewEnhanced {
         const characterRect = this.container.getBoundingClientRect();
         const windowWidth = window.innerWidth;
 
-        // Si el personaje se acerca al borde derecho
-        if (characterRect.right > windowWidth * 0.8) {  // Ajusta el valor según el margen que quieras
-            this.moveRight();  // Llamar al handler del PortfolioView para mover la pantalla
+        if (characterRect.right > windowWidth * 0.8) {
+            this.moveRight();
         }
 
-        // Si el personaje se acerca al borde izquierdo
-        if (characterRect.left < windowWidth * 0.2) {  // Ajusta el valor según el margen que quieras
-            this.moveLeft();  // Llamar al handler del PortfolioView para mover la pantalla
+        if (characterRect.left < windowWidth * 0.2) {
+            this.moveLeft();
         }
     }
 }

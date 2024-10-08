@@ -1,4 +1,4 @@
-import { LEFT, RIGHT } from "../../libraries/constants.js";
+import { DASHBLOCKS, LEFT, MEMORYGAME, PINGPONG, RIGHT, WANO } from "../../libraries/constants.js";
 import { div, h2, img, p } from "../../libraries/html.js";
 import { ViewEnhanced } from "../../view/viewEnhanced.js";
 import { CharacterController } from "../character/characterController.js";
@@ -28,15 +28,15 @@ export class PortfolioView extends ViewEnhanced {
         this.aboutMeImg = img(this.aboutMeContainer, { className: 'aboutMeImg', src: '/public/assets/meReal.png' })
         this.aboutMeTextContainer = div(this.aboutMeContainer, { className: 'aboutMeTextContainer' })
         this.welcomeMsg = div(this.aboutMeTextContainer, { className: 'welcomeMsg', textContent: 'Welcome' });
-        this.aboutInformation = p(this.aboutMeTextContainer, { className: 'aboutInformation', innerHTML: `I'm a passionate developer based in Costa Rica <br> Someone who LOVES videogames, technology and science, I also <br> love One Piece and Bikes, but I won't tell you my secrets` });
+        this.aboutInformation = p(this.aboutMeTextContainer, { className: 'aboutInformation', innerHTML: `I'm a passionate developer based in Costa Rica <br> Someone who LOVES videogames, technology and science, I also <br> love One Piece and Bikes, but I won't tell you <br> more of my secrets.` });
 
         /* portal */
         this.portal = div(this.container, { className: 'portal' })
 
         /* projects */
 
-        /* this.mainProjectTitle = h2(this.container, { className: 'mainProjectTitle', textContent: 'These are some of my projects' }); */
         this.mainProjectsContainer = div(this.container, { className: 'mainProjectsContainer' });
+        this.mainProjectTitle = h2(this.mainProjectsContainer, { className: 'mainProjectTitle', textContent: 'These are some of my projects' });
 
         this.projectsContainerOne = div(this.mainProjectsContainer, { className: 'projectsContainerOne' });
         this.projectsContainerTwo = div(this.mainProjectsContainer, { className: 'projectsContainerTwo' });
@@ -44,7 +44,7 @@ export class PortfolioView extends ViewEnhanced {
         this.dashBlocksContent = div(this.projectsContainerOne, { className: 'project' });
         this.dashBlocksTitle = p(this.dashBlocksContent, { className: 'projectTitle', textContent: 'Dash_Blocks' })
         this.dashBlocksInfo = p(this.dashBlocksContent, { className: 'projectInfo', innerHTML: 'This is a game which was created using JS, CSS, HTML and <br>firebase services. Following the paradigm object oriented programming (OPP).' })
-        this.dashBlocksButton = div(this.dashBlocksContent, { className: 'projectButton', textContent: 'Visit' })
+        this.dashBlocksButton = div(this.dashBlocksContent, { className: 'projectButton', textContent: 'Visit', onclick: this.onDashBlocks.bind(this) })
 
         this.andreaBotContent = div(this.projectsContainerOne, { className: 'project' });
         this.andreaBotTitle = p(this.andreaBotContent, { className: 'projectTitle', textContent: 'Andrea Virtual Assistant' });
@@ -54,17 +54,17 @@ export class PortfolioView extends ViewEnhanced {
         this.pingPongContent = div(this.projectsContainerOne, { className: 'project' });
         this.pingPongTitle = p(this.pingPongContent, { className: 'projectTitle', textContent: 'Ping Pong Game' });
         this.pingPongInfo = p(this.pingPongContent, { className: 'projectInfo', innerHTML: 'This is a very fun game to play 1v1 in your local PC, also created following <br >the OOP using JS, CSS and HTML.' });
-        this.pingPongButton = div(this.pingPongContent, { className: 'projectButton', textContent: 'Visit' })
+        this.pingPongButton = div(this.pingPongContent, { className: 'projectButton', textContent: 'Visit', onclick: this.onPingPong.bind(this) })
 
         this.memoryGameContent = div(this.projectsContainerTwo, { className: 'project' });
         this.memoryGameTitle = p(this.memoryGameContent, { className: 'projectTitle', textContent: 'Memory Game' });
         this.memoryGameInfo = p(this.memoryGameContent, { className: 'projectInfo', innerHTML: 'This is a memory game that was created following OPP, using JS, HTML, CSS and <br> Firebase as its database.' });
-        this.memoryGameButton = div(this.memoryGameContent, { className: 'projectButton', textContent: 'Visit' })
+        this.memoryGameButton = div(this.memoryGameContent, { className: 'projectButton', textContent: 'Visit', onclick: this.onMemoryGame.bind(this) })
 
         this.wanoBotContent = div(this.projectsContainerTwo, { className: 'project' });
         this.wanoBotTitle = p(this.wanoBotContent, { className: 'projectTitle', textContent: 'Wano Bot' });
         this.wanoBotInfo = p(this.wanoBotContent, { className: 'projectInfo', innerHTML: 'This is a Discord Bot which integrates a welcome system and ChatGPT to interact <br> with the users of the server where is invited.' });
-        this.wanoBotButton = div(this.wanoBotContent, { className: 'projectButton', textContent: 'Visit' });
+        this.wanoBotButton = div(this.wanoBotContent, { className: 'projectButton', textContent: 'Visit', onclick: this.onWano.bind(this) });
 
         this.billingSystemContent = div(this.projectsContainerTwo, { className: 'project' });
         this.billingSystemTitle = p(this.billingSystemContent, { className: 'projectTitle', textContent: 'Billing System' });
@@ -131,4 +131,16 @@ export class PortfolioView extends ViewEnhanced {
         });
     }
 
+    onDashBlocks() {
+        this.controller.appManager.onLinkButton(DASHBLOCKS)
+    }
+    onPingPong() {
+        this.controller.appManager.onLinkButton(PINGPONG)
+    }
+    onMemoryGame() {
+        this.controller.appManager.onLinkButton(MEMORYGAME)
+    }
+    onWano() {
+        this.controller.appManager.onLinkButton(WANO)
+    }
 }
