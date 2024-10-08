@@ -1,8 +1,8 @@
 .portfolioController {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 
-    background: radial-gradient(rgb(17, 17, 17), rgb(0, 0, 0));
+    background-color: black;
 
     position: fixed;
     overflow-x: hidden;
@@ -11,7 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+
 }
 
 /* buttons */
@@ -42,7 +42,7 @@
     align-items: center;
 }
 
-/* buttons */
+/* About me information */
 
 
 .nameContainer {
@@ -52,12 +52,12 @@
 
 .welcomeContainer {
     height: 100%;
+    width: 200vw;
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
 
 .welcomeTitle {
@@ -93,8 +93,9 @@ kbd {
 .aboutMeContainer {
     color: white;
     height: 100%;
+    width: 270vw;
     position: absolute;
-    right: -50vw;
+    right: -140vw;
 
     display: flex;
     justify-content: center;
@@ -149,4 +150,68 @@ kbd {
     background-color: white;
 
     clip-path: polygon(82% 0, 73% 16%, 76% 65%, 72% 83%, 93% 100%, 50% 100%, 24% 100%, 35% 74%, 48% 40%, 7% 0);
+}
+
+/* Projects */
+
+.mainProjectsContainer {
+    position: absolute;
+    right: -200vw;
+    width: 130vw;
+    height: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+}
+
+.mainProjectTitle {
+    font-size: 2vw;
+    color: white;
+}
+
+.projectsContainerOne {
+    font-size: 1.5vw;
+    color: #cacdc8;
+
+    margin: 20px;
+}
+
+.projectsContainerTwo {
+    font-size: 1.5vw;
+    color: #cacdc8;
+    margin: 20px;
+}
+
+.projectTitle {
+    color: #fcfefb;
+}
+
+.projectButton {
+    color: #cacdc8;
+    text-align: center;
+    border: 1px solid #fcfefb;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.notAvailableBtn {
+    color: #cacdc8;
+    text-align: center;
+    border: 1px solid #fcfefb;
+    border-radius: 10px;
+
+    transition: transform 0.5s ease;
+}
+
+.notAvailableBtn:hover {
+    color: #edf1eb;
+    cursor: no-drop;
+}
+
+.projectButton:hover {
+    color: #edf1eb;
+    transform: scale(1.1);
+    cursor: pointer;
 }

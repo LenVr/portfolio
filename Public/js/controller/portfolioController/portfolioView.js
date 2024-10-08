@@ -1,5 +1,5 @@
 import { LEFT, RIGHT } from "../../libraries/constants.js";
-import { div, img, p } from "../../libraries/html.js";
+import { div, h2, img, p } from "../../libraries/html.js";
 import { ViewEnhanced } from "../../view/viewEnhanced.js";
 import { CharacterController } from "../character/characterController.js";
 
@@ -11,25 +11,68 @@ export class PortfolioView extends ViewEnhanced {
         this.character = new CharacterController(this, this.container);
         this.scrollAmount = 25;
 
+        /* Div to style cursos */
         this.cursor = div(this.container, { className: 'cursor' })
         this.cursorMovement()
 
+        /* Saying HI message */
         this.welcomeContainer = div(this.container, { className: 'welcomeContainer' })
         this.nameContainer = div(this.welcomeContainer, { className: 'nameContainer' })
         this.welcomeTitle = p(this.nameContainer, { className: 'welcomeTitle' });
         this.instructions = p(this.welcomeContainer, { className: 'instructions' });
         this.instructionsMobile = p(this.welcomeContainer, { className: 'instructionsMobile' });
 
+        /* About me information */
         this.aboutMeContainer = div(this.container, { className: 'aboutMeContainer' });
         this.aboutMeImgContainer = div(this.aboutMeContainer, { className: 'aboutMeImgContainer' });
         this.aboutMeImg = img(this.aboutMeContainer, { className: 'aboutMeImg', src: '/public/assets/meReal.png' })
         this.aboutMeTextContainer = div(this.aboutMeContainer, { className: 'aboutMeTextContainer' })
         this.welcomeMsg = div(this.aboutMeTextContainer, { className: 'welcomeMsg', textContent: 'Welcome' });
-        this.aboutInformation = p(this.aboutMeTextContainer, { className: 'aboutInformation', innerHTML: `I'm a passionate web developer based in Costa Rica <br> Someone whole LOVES videogames, technology and science, I also <br> love One Piece and Bikes, but I won't tell you my secrets` });
+        this.aboutInformation = p(this.aboutMeTextContainer, { className: 'aboutInformation', innerHTML: `I'm a passionate developer based in Costa Rica <br> Someone who LOVES videogames, technology and science, I also <br> love One Piece and Bikes, but I won't tell you my secrets` });
 
+        /* portal */
         this.portal = div(this.container, { className: 'portal' })
 
+        /* projects */
 
+        /* this.mainProjectTitle = h2(this.container, { className: 'mainProjectTitle', textContent: 'These are some of my projects' }); */
+        this.mainProjectsContainer = div(this.container, { className: 'mainProjectsContainer' });
+
+        this.projectsContainerOne = div(this.mainProjectsContainer, { className: 'projectsContainerOne' });
+        this.projectsContainerTwo = div(this.mainProjectsContainer, { className: 'projectsContainerTwo' });
+
+        this.dashBlocksContent = div(this.projectsContainerOne, { className: 'project' });
+        this.dashBlocksTitle = p(this.dashBlocksContent, { className: 'projectTitle', textContent: 'Dash_Blocks' })
+        this.dashBlocksInfo = p(this.dashBlocksContent, { className: 'projectInfo', innerHTML: 'This is a game which was created using JS, CSS, HTML and <br>firebase services. Following the paradigm object oriented programming (OPP).' })
+        this.dashBlocksButton = div(this.dashBlocksContent, { className: 'projectButton', textContent: 'Visit' })
+
+        this.andreaBotContent = div(this.projectsContainerOne, { className: 'project' });
+        this.andreaBotTitle = p(this.andreaBotContent, { className: 'projectTitle', textContent: 'Andrea Virtual Assistant' });
+        this.andreaBotInfo = p(this.andreaBotContent, { className: 'projectInfo', innerHTML: 'This assistant services an English academy, It assists teachers, students and  <BR> management in the daily basis. It was created using JS, DiscordJs and NodeJs.' });
+        this.andreaBotButton = div(this.andreaBotContent, { className: 'notAvailableBtn', textContent: 'Staff only' })
+
+        this.pingPongContent = div(this.projectsContainerOne, { className: 'project' });
+        this.pingPongTitle = p(this.pingPongContent, { className: 'projectTitle', textContent: 'Ping Pong Game' });
+        this.pingPongInfo = p(this.pingPongContent, { className: 'projectInfo', innerHTML: 'This is a very fun game to play 1v1 in your local PC, also created following <br >the OOP using JS, CSS and HTML.' });
+        this.pingPongButton = div(this.pingPongContent, { className: 'projectButton', textContent: 'Visit' })
+
+        this.memoryGameContent = div(this.projectsContainerTwo, { className: 'project' });
+        this.memoryGameTitle = p(this.memoryGameContent, { className: 'projectTitle', textContent: 'Memory Game' });
+        this.memoryGameInfo = p(this.memoryGameContent, { className: 'projectInfo', innerHTML: 'This is a memory game that was created following OPP, using JS, HTML, CSS and <br> Firebase as its database.' });
+        this.memoryGameButton = div(this.memoryGameContent, { className: 'projectButton', textContent: 'Visit' })
+
+        this.wanoBotContent = div(this.projectsContainerTwo, { className: 'project' });
+        this.wanoBotTitle = p(this.wanoBotContent, { className: 'projectTitle', textContent: 'Wano Bot' });
+        this.wanoBotInfo = p(this.wanoBotContent, { className: 'projectInfo', innerHTML: 'This is a Discord Bot which integrates a welcome system and ChatGPT to interact <br> with the users of the server where is invited.' });
+        this.wanoBotButton = div(this.wanoBotContent, { className: 'projectButton', textContent: 'Visit' });
+
+        this.billingSystemContent = div(this.projectsContainerTwo, { className: 'project' });
+        this.billingSystemTitle = p(this.billingSystemContent, { className: 'projectTitle', textContent: 'Billing System' });
+        this.billingSystemInfo = p(this.billingSystemContent, { className: 'projectInfo', innerHTML: `This is a billin system made for an English Academy. Generates invoices and manage the students` });
+        this.billingSystemButton = div(this.billingSystemContent, { className: 'notAvailableBtn', textContent: 'Staff only' })
+
+
+        /* left and right button for mobiles to move from left to right and viceversa */
         this.leftButton = div(this.container, { className: 'leftButton', onmousedown: this.onLeftButton.bind(this), onmouseup: this.upLeftButton.bind(this) })
         this.rightButton = div(this.container, { className: 'rightButton', onmousedown: this.onRightButton.bind(this), onmouseup: this.upRightButton.bind(this) })
 
