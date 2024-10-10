@@ -174,14 +174,29 @@ kbd {
 .projectsContainerOne {
     font-size: 1.5vw;
     color: #cacdc8;
-
     margin: 20px;
+
+    width: 130vw;
+    height: 100%;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .projectsContainerTwo {
     font-size: 1.5vw;
     color: #cacdc8;
     margin: 20px;
+
+    width: 130vw;
+    height: 100%;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .projectTitle {
@@ -194,6 +209,8 @@ kbd {
     border: 1px solid #fcfefb;
     border-radius: 10px;
     transition: transform 0.5s ease;
+
+    width: 300px;
 }
 
 .notAvailableBtn {
@@ -203,6 +220,7 @@ kbd {
     border-radius: 10px;
 
     transition: transform 0.5s ease;
+    width: 300px;
 }
 
 .notAvailableBtn:hover {
@@ -214,4 +232,43 @@ kbd {
     color: #edf1eb;
     transform: scale(1.1);
     cursor: pointer;
+}
+
+/* Skills Container */
+
+.skillsContainer {
+    position: absolute;
+    right: -300vw;
+    width: 100vw;
+    height: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+}
+
+.skillsMainContainer {
+    width: 50vw;
+    height: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skillsMainContainer p,
+h2 {
+    color: white;
+}
+
+.skillsMainContainer p {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.skillsMainContainer h2 {
+    font-size: 2vw;
+    font-weight: bolder;
 }

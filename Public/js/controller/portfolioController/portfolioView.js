@@ -71,6 +71,19 @@ export class PortfolioView extends ViewEnhanced {
         this.billingSystemInfo = p(this.billingSystemContent, { className: 'projectInfo', innerHTML: `This is a billin system made for an English Academy. Generates invoices and manage the students` });
         this.billingSystemButton = div(this.billingSystemContent, { className: 'notAvailableBtn', textContent: 'Staff only' })
 
+        this.skillsMainContainer = div(this.container, { className: 'skillsContainer' });
+
+        this.skillsContainer = div(this.skillsMainContainer, { className: 'skillsMainContainer' });
+        this.javascript = p(this.skillsContainer, { innerHTML: 'Javascript' });
+        this.css = p(this.skillsContainer, { innerHTML: 'CSS' });
+        this.python = p(this.skillsContainer, { innerHTML: 'Python' });
+        this.nodeJs = p(this.skillsContainer, { innerHTML: 'Node Js' });
+        this.git = p(this.skillsContainer, { innerHTML: 'Git Version Control' });
+        this.skillsTitle = h2(this.skillsContainer, { className: 'skillsTitle', textContent: 'These are some of my skills' });
+        this.dataBases = p(this.skillsContainer, { innerHTML: 'SQL and NoSQL databases' });
+        this.figma = p(this.skillsContainer, { innerHTML: 'Figma' });
+        this.animate = p(this.skillsContainer, { innerHTML: 'Adobe Animate' });
+        this.photoshop = p(this.skillsContainer, { innerHTML: 'Photoshop' });
 
         /* left and right button for mobiles to move from left to right and viceversa */
         this.leftButton = div(this.container, { className: 'leftButton', onmousedown: this.onLeftButton.bind(this), onmouseup: this.upLeftButton.bind(this) })
