@@ -199,6 +199,14 @@ kbd {
     flex-direction: column;
 }
 
+.projectsContainerTwo:hover {
+    color: #f4f7f3;
+}
+
+.projectsContainerOne:hover {
+    color: #f4f7f3;
+}
+
 .projectTitle {
     color: #fcfefb;
 }
@@ -266,6 +274,11 @@ h2 {
 .skillsMainContainer p {
     font-size: 1.5vw;
     font-weight: bold;
+    color: #cacdc8;
+}
+
+.skillsMainContainer p:hover {
+    color: #fafcf8;
 }
 
 .skillsMainContainer h2 {
