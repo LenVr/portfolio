@@ -156,4 +156,13 @@ export class PortfolioView extends ViewEnhanced {
     onWano() {
         this.controller.appManager.onLinkButton(WANO)
     }
+
+    showContactContainer(timer) {
+        this.contactMeContainer = div(this.container, { className: 'contactMeContainer', innerHTML: 'CONTACT ME', onclick: this.onContactMeBtn.bind(this) });
+        console.log(timer);
+    }
+
+    onContactMeBtn() {
+        console.log('click on contact');
+    }
 }

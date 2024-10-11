@@ -285,3 +285,80 @@ h2 {
     font-size: 2vw;
     font-weight: bolder;
 }
+
+/* Contact me */
+
+.contactMeContainer {
+    width: 20vw;
+    height: 50px;
+
+    background-color: transparent;
+    border: 2px solid #b4e5af;
+
+    position: fixed;
+    top: 1vw;
+    left: -100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: width 0.5s ease;
+
+    color: #b4e5af;
+    font-weight: bolder;
+    font-size: 2em;
+
+    animation: show 2s ease forwards;
+}
+
+@keyframes show {
+    0% {
+        left: -90vw;
+    }
+
+    25% {
+        left: -60vw;
+    }
+
+    50% {
+        left: -30vw;
+    }
+
+    75% {
+        left: 0vw;
+    }
+
+    100% {
+        left: 1vw;
+    }
+}
+
+
+.contactMeContainer:hover {
+    cursor: pointer;
+    width: 25vw;
+    overflow: hidden;
+}
+
+/* Media queries */
+
+@media (max-width: 425px) {
+    .skillsContainer {
+        position: absolute;
+        right: -400vw;
+        width: 100vw;
+        height: 80%;
+    }
+
+    .contactMeContainer {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 320px) {
+    .contactMeContainer {
+        font-size: 1em;
+        width: 30vw;
+    }
+}
