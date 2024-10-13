@@ -6,3 +6,5 @@ export const DASHBLOCKS = 3;
 export const PINGPONG = 4;
 export const MEMORYGAME = 5;
 export const WANO = 6;
+
+export const CONTACTME = 7;

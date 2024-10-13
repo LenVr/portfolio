@@ -1,5 +1,6 @@
+import { ContactMeController } from "./controller/contactMeController/contactMeController.js";
 import { PortfolioController } from "./controller/portfolioController/portfolioContainer.js";
-import { DASHBLOCKS, MEMORYGAME, PINGPONG, WANO } from "./libraries/constants.js";
+import { CONTACTME, DASHBLOCKS, MEMORYGAME, PINGPONG, WANO } from "./libraries/constants.js";
 import { div } from "./libraries/html.js"
 
 export class AppManager {
@@ -24,6 +25,17 @@ export class AppManager {
             case WANO:
                 window.open('https://lenvr.github.io/WanoWeb/');
                 break;
+            default:
+                break;
+        }
+    }
+
+    showController(controller) {
+        switch (controller) {
+            case CONTACTME:
+                this.currentController = new ContactMeController(this, this.controllerContainer)
+                break;
+
             default:
                 break;
         }

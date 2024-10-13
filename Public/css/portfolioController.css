@@ -352,6 +352,7 @@ h2 {
     }
 
     .contactMeContainer {
+        width: 30vw;
         font-size: 1em;
     }
 }

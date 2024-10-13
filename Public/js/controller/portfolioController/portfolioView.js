@@ -1,4 +1,4 @@
-import { DASHBLOCKS, LEFT, MEMORYGAME, PINGPONG, RIGHT, WANO } from "../../libraries/constants.js";
+import { CONTACTME, DASHBLOCKS, LEFT, MEMORYGAME, PINGPONG, RIGHT, WANO } from "../../libraries/constants.js";
 import { div, h2, img, p } from "../../libraries/html.js";
 import { ViewEnhanced } from "../../view/viewEnhanced.js";
 import { CharacterController } from "../character/characterController.js";
@@ -89,6 +89,8 @@ export class PortfolioView extends ViewEnhanced {
         this.leftButton = div(this.container, { className: 'leftButton', onmousedown: this.onLeftButton.bind(this), onmouseup: this.upLeftButton.bind(this) })
         this.rightButton = div(this.container, { className: 'rightButton', onmousedown: this.onRightButton.bind(this), onmouseup: this.upRightButton.bind(this) })
 
+        this.contactMeController = null;
+
 
         this.writing = true;
         this.index = 0
@@ -159,10 +161,9 @@ export class PortfolioView extends ViewEnhanced {
 
     showContactContainer(timer) {
         this.contactMeContainer = div(this.container, { className: 'contactMeContainer', innerHTML: 'CONTACT ME', onclick: this.onContactMeBtn.bind(this) });
-        console.log(timer);
     }
 
     onContactMeBtn() {
-        console.log('click on contact');
+        this.controller.appManager.showController(CONTACTME)
     }
 }
