@@ -25,7 +25,7 @@ export class PortfolioView extends ViewEnhanced {
         /* About me information */
         this.aboutMeContainer = div(this.container, { className: 'aboutMeContainer' });
         this.aboutMeImgContainer = div(this.aboutMeContainer, { className: 'aboutMeImgContainer' });
-        this.aboutMeImg = img(this.aboutMeContainer, { className: 'aboutMeImg', src: '/public/assets/meReal.png' })
+        this.aboutMeImg = img(this.aboutMeContainer, { className: 'aboutMeImg', src: './Public/assets/meReal.png' })
         this.aboutMeTextContainer = div(this.aboutMeContainer, { className: 'aboutMeTextContainer' })
         this.welcomeMsg = div(this.aboutMeTextContainer, { className: 'welcomeMsg', textContent: 'Welcome' });
         this.aboutInformation = p(this.aboutMeTextContainer, { className: 'aboutInformation', innerHTML: `I'm a passionate developer based in Costa Rica <br> Someone who LOVES videogames, technology and science, I also <br> love One Piece and Bikes, but I won't tell you <br> more of my secrets.` });
