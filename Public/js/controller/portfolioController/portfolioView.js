@@ -43,7 +43,7 @@ export class PortfolioView extends ViewEnhanced {
 
         this.dashBlocksContent = div(this.projectsContainerOne, { className: 'project' });
         this.dashBlocksTitle = p(this.dashBlocksContent, { className: 'projectTitle', textContent: 'Dash_Blocks' })
-        this.dashBlocksInfo = p(this.dashBlocksContent, { className: 'projectInfo', innerHTML: 'This is a game which was created using JS, CSS, HTML and <br>firebase services. Following the paradigm object oriented programming (OPP).' })
+        this.dashBlocksInfo = p(this.dashBlocksContent, { className: 'projectInfo', innerHTML: 'This is a game which was created using JS, CSS, HTML and <br>firebase services. Following the paradigm object oriented programming (OOP).' })
         this.dashBlocksButton = div(this.dashBlocksContent, { className: 'projectButton', textContent: 'Visit', onclick: this.onDashBlocks.bind(this) })
 
         this.andreaBotContent = div(this.projectsContainerOne, { className: 'project' });
@@ -58,7 +58,7 @@ export class PortfolioView extends ViewEnhanced {
 
         this.memoryGameContent = div(this.projectsContainerTwo, { className: 'project' });
         this.memoryGameTitle = p(this.memoryGameContent, { className: 'projectTitle', textContent: 'Memory Game' });
-        this.memoryGameInfo = p(this.memoryGameContent, { className: 'projectInfo', innerHTML: 'This is a memory game that was created following OPP, using JS, HTML, CSS and <br> Firebase as its database.' });
+        this.memoryGameInfo = p(this.memoryGameContent, { className: 'projectInfo', innerHTML: 'This is a memory game that was created following OOP, using JS, HTML, CSS and <br> Firebase as its database.' });
         this.memoryGameButton = div(this.memoryGameContent, { className: 'projectButton', textContent: 'Visit', onclick: this.onMemoryGame.bind(this) })
 
         this.wanoBotContent = div(this.projectsContainerTwo, { className: 'project' });
