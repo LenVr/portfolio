@@ -1,204 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi! I am Len</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./Public/assets/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="Public/css/index.css">
-    <link rel="stylesheet" href="Public/css/projectModal.css">
-    <link rel="stylesheet" href="Public/css/contactMe.css">
+    <script src="https://kit.fontawesome.com/b4b9a5cfa2.js" crossorigin="anonymous"></script>
+    <script src="./Public/js/main.js" type="module"></script>
 
-    <script type="module" src="Public/js/controllers/projects.js"></script>
-    <script type="module" src="Public/js/controllers/contactMe.js"></script>
-    <script type="module" src="Public/js/index.js"></script>
+    <link rel="stylesheet" href="/Public/css/index.css">
+    <link rel="stylesheet" href="/Public/css/portfolioController.css">
+    <link rel="stylesheet" href="/Public/css/characterController.css">
+    <link rel="stylesheet" href="/Public/css/contactMeController.css">
+    <link rel="stylesheet" href="/Public/css/returnController.css">
 
-    <title>Brandon L.</title>
 </head>
 
 <body>
-    <header>
-        <div class="contactUsContainer container-fluid">
-            <div class="contactBtnContainer">
-                <button id="contactBtnTop" type="button" class="contactMeBtn">Contact me</button>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="mainSection">
-            <div class="container-fluid assetsHeaderContainer">
-                <div class="row">
-                    <div id="lineContainer">
-
-                    </div>
-                    <div class="col-6 imgContainer">
-                        <img src="Public/assets/luffyGod.png" alt="">
-                    </div>
-                    <div class="col-6 imgContainer">
-                        <img src="Public/assets/meReal.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid titlesContainer">
-                <div class="myName">
-                    <h1>
-                        Brandon Len
-                    </h1>
-                </div>
-                <div id="titleLine">
-
-                </div>
-                <div class="subtitle">
-                    <h2>
-                        Designer & Web
-                        Developer
-                    </h2>
-                </div>
-            </div>
-        </section>
-        <section class="introContainer">
-            <div class="container-fluid introTextContainer">
-                <div class="titleContainer">
-                    <h3>Hello, I’m Brandon! But you can call me Len.</h3>
-                </div>
-                <div class="paragraphContainer">
-                    <p class="text-center">
-                        I am a frontend developer who loves challenges, I love creating solutions for those people who
-                        need them. I am someone
-                        who is quite confident, curious, creative and eager to learn from this unknown universe.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="skillsContainer">
-            <div class="container skillsInfo">
-                <div class="row infoContainer text-center">
-                    <div class="col-6 contentContainer">
-                        <img src="Public/assets/deCharcter.svg" alt="...">
-                        <h4>Designer</h4>
-                        <p>I love designing:</p>
-                        <p>UX, UI, Web, Logos</p>
-                        <p>Tools I use:</p>
-                        <p>Figma</p>
-                        <p>Font Awesome</p>
-                        <p>Adobe Photoshop</p>
-                        <p>Adobe Animate</p>
-                    </div>
-                    <div class="skillsLine">
-
-                    </div>
-                    <div class="col-6 contentContainer">
-                        <img id="bot" src="Public/assets/botProgrammer.svg" alt="...">
-                        <h4>Frontend Developer</h4>
-                        <p>Languages I speak:</p>
-                        <p>HTML, CSS, Javascript, Python</p>
-                        <p>Tools I use:</p>
-                        <p>Bootstrap</p>
-                        <p>Github</p>
-                        <p>NodeJs</p>
-                        <p>SQL & NoSQL DataBases</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="projectSection">
-            <div class="projectTitleContainer container text-center">
-                <h1 class="title">
-                    My projects
-                </h1>
-            </div>
-            <div class="projectsContainer">
-                <div class="imgTextContainer">
-                    <div class="text-center prjContainer">
-                        <div id="prj1" class="prjImgContainer">
-                            <img src="Public/assets/WanoWeb.jpg" alt="">
-                        </div>
-                        <h5>Wano Discord Bot</h5>
-                    </div>
-                    <div class="text-center prjContainer">
-                        <div id="prj2" class="prjImgContainer">
-                            <img src="Public/assets/pinpongIcon.png" alt="">
-                        </div>
-                        <h5>Ping Pong Game</h5>
-                    </div>
-                </div>
-                <div class="imgTextContainer">
-                    <div class="text-center prjContainer">
-                        <div id="prj3" class="prjImgContainer">
-                            <img src="Public/assets/memoryGameTitle.png" alt="">
-                        </div>
-                        <h5>Memory Game</h5>
-                    </div>
-                    <div class="text-center prjContainer">
-                        <div id="prj4" class="prjImgContainer">
-                            <img src="Public/assets/CALogo.png" alt="">
-                        </div>
-                        <h5>Facturation system</h5>
-                    </div>
-                    <div class="text-center prjContainer">
-                        <div id="prj5" class="prjImgContainer">
-                            <img src="Public/assets/asistenteVirtual.png" alt="">
-                        </div>
-                        <h5 class=""> Discord Virtual assistant<h5>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="startProject">
-            <div class="container startingProjectContainer">
-                <div class="questionContainer text-center">
-                    <h1 class="questionTitleContainer">
-                        Starting a project?
-                    </h1>
-                </div>
-                <div class="questionContainer">
-                    <h6 class="text-center">
-                        Would you like to work together?
-                    </h6>
-                    <h6 class="text-center">
-                        Don’t hesitate and talk to me
-                    </h6>
-                </div>
-                <div class="questionContainer">
-                    <button type="button" id="sendMessageBtn">
-                        Send me a message!
-                    </button>
-                </div>
-            </div>
-        </section>
-
-    </main>
-    <footer>
-        <div class="container-fluid footer">
-            <a href="https://www.linkedin.com/in/brandon-l-villalobos-rojas-8a5172220/" target="_blank">
-                <i class="uil uil-linkedin"></i>
-            </a>
-            <a href="https://github.com/LenVr" target="_blank">
-                <i class="uil uil-github-alt"></i>
-            </a>
-            <div class="contactInfo">
-                <p>
-                    <i class="uil uil-envelope-minus"></i>
-                    villalobosrojas22@gmail.com
-                </p>
-                <p>
-                    <i class="uil uil-phone"></i>
-                    +506 8997-1580
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

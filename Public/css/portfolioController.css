@@ -1,0 +1,365 @@
+.portfolioController {
+    width: 100%;
+    height: 100%;
+
+    background-color: black;
+
+    position: fixed;
+    overflow-x: hidden;
+    white-space: nowrap;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* buttons */
+
+.leftButton {
+    position: fixed;
+    left: 0;
+    width: 5%;
+    height: 100%;
+
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightButton {
+    position: fixed;
+    right: 0;
+    width: 5%;
+    height: 100%;
+
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* About me information */
+
+
+.nameContainer {
+    height: 15vw;
+}
+
+
+.welcomeContainer {
+    height: 100%;
+    width: 200vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcomeTitle {
+    color: white;
+    font-size: 5vw;
+
+    user-select: none;
+}
+
+.instructions {
+    color: white;
+    font-size: 2vw;
+
+    user-select: none;
+}
+
+.instructionsMobile {
+    color: white;
+    font-size: 1.5vw;
+
+    user-select: none;
+}
+
+kbd {
+    background-color: rgb(36, 35, 35);
+    padding: 10px;
+    border: 4px;
+    border-radius: 5px;
+    box-shadow: -1px -2px 1px rgb(112, 112, 112);
+    cursor: pointer;
+}
+
+.aboutMeContainer {
+    color: white;
+    height: 100%;
+    width: 270vw;
+    position: absolute;
+    right: -140vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.aboutMeImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutMeImg {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+}
+
+.welcomeMsg {
+    color: white;
+    font-size: 8vw;
+}
+
+.aboutMeTextContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.aboutInformation {
+    text-align: center;
+    font-size: 1.8vw;
+}
+
+.aboutMeImg {
+    width: 30vw;
+    height: 30vw;
+}
+
+/* portal container */
+
+.portal {
+    width: 100px;
+    height: 100%;
+
+    position: absolute;
+    right: -60vw;
+
+    background-color: white;
+
+    clip-path: polygon(82% 0, 73% 16%, 76% 65%, 72% 83%, 93% 100%, 50% 100%, 24% 100%, 35% 74%, 48% 40%, 7% 0);
+}
+
+/* Projects */
+
+.mainProjectsContainer {
+    position: absolute;
+    right: -200vw;
+    width: 130vw;
+    height: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+}
+
+.mainProjectTitle {
+    font-size: 2vw;
+    color: white;
+}
+
+.projectsContainerOne {
+    font-size: 1.5vw;
+    color: #cacdc8;
+    margin: 20px;
+
+    width: 130vw;
+    height: 100%;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.projectsContainerTwo {
+    font-size: 1.5vw;
+    color: #cacdc8;
+    margin: 20px;
+
+    width: 130vw;
+    height: 100%;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.projectsContainerTwo:hover {
+    color: #f4f7f3;
+}
+
+.projectsContainerOne:hover {
+    color: #f4f7f3;
+}
+
+.projectTitle {
+    color: #fcfefb;
+}
+
+.projectButton {
+    color: #cacdc8;
+    text-align: center;
+    border: 1px solid #fcfefb;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+
+    width: 300px;
+}
+
+.notAvailableBtn {
+    color: #cacdc8;
+    text-align: center;
+    border: 1px solid #fcfefb;
+    border-radius: 10px;
+
+    transition: transform 0.5s ease;
+    width: 300px;
+}
+
+.notAvailableBtn:hover {
+    color: #edf1eb;
+    cursor: no-drop;
+}
+
+.projectButton:hover {
+    color: #edf1eb;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Skills Container */
+
+.skillsContainer {
+    position: absolute;
+    right: -300vw;
+    width: 100vw;
+    height: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+}
+
+.skillsMainContainer {
+    width: 50vw;
+    height: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skillsMainContainer p,
+h2 {
+    color: white;
+}
+
+.skillsMainContainer p {
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #cacdc8;
+}
+
+.skillsMainContainer p:hover {
+    color: #fafcf8;
+}
+
+.skillsMainContainer h2 {
+    font-size: 2vw;
+    font-weight: bolder;
+}
+
+/* Contact me */
+
+.contactMeContainer {
+    width: 20vw;
+    height: 50px;
+
+    background-color: transparent;
+    border: 2px solid #b4e5af;
+
+    position: fixed;
+    top: 1vw;
+    left: -100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: width 0.5s ease;
+
+    color: #b4e5af;
+    font-weight: bolder;
+    font-size: 2em;
+
+    animation: show 2s ease forwards;
+}
+
+@keyframes show {
+    0% {
+        left: -90vw;
+    }
+
+    25% {
+        left: -60vw;
+    }
+
+    50% {
+        left: -30vw;
+    }
+
+    75% {
+        left: 0vw;
+    }
+
+    100% {
+        left: 1vw;
+    }
+}
+
+
+.contactMeContainer:hover {
+    cursor: pointer;
+    width: 25vw;
+    overflow: hidden;
+}
+
+/* Media queries */
+
+@media (max-width: 425px) {
+    .skillsContainer {
+        position: absolute;
+        right: -400vw;
+        width: 100vw;
+        height: 80%;
+    }
+
+    .contactMeContainer {
+        width: 30vw;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 320px) {
+    .contactMeContainer {
+        font-size: 1em;
+        width: 30vw;
+    }
+}
