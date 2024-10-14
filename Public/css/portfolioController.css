@@ -355,6 +355,20 @@ h2 {
         width: 30vw;
         font-size: 1em;
     }
+
+    .instructions {
+        font-size: 3vw;
+        margin-left: -10px;
+    }
+
+    .instructionsMobile {
+        margin-top: 50px;
+        font-size: 4vw;
+    }
+
+    .aboutInformation {
+        font-size: 1.5vw;
+    }
 }
 
 @media (max-width: 320px) {

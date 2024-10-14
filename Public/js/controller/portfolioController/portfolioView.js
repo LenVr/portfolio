@@ -86,8 +86,8 @@ export class PortfolioView extends ViewEnhanced {
         this.photoshop = p(this.skillsContainer, { innerHTML: 'Photoshop' });
 
         /* left and right button for mobiles to move from left to right and viceversa */
-        this.leftButton = div(this.container, { className: 'leftButton', onmousedown: this.onLeftButton.bind(this), onmouseup: this.upLeftButton.bind(this) })
-        this.rightButton = div(this.container, { className: 'rightButton', onmousedown: this.onRightButton.bind(this), onmouseup: this.upRightButton.bind(this) })
+        this.leftButton = div(this.container, { className: 'leftButton', ontouchstart: this.onLeftButton.bind(this), ontouchend: this.upLeftButton.bind(this) })
+        this.rightButton = div(this.container, { className: 'rightButton', ontouchstart: this.onRightButton.bind(this), ontouchend: this.upRightButton.bind(this) })
 
         this.contactMeController = null;
 
