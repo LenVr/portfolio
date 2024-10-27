@@ -19,11 +19,10 @@
 .leftButton {
     position: fixed;
     left: 0;
-    width: 5%;
+    width: 10%;
     height: 100%;
 
     background-color: transparent;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,11 +31,10 @@
 .rightButton {
     position: fixed;
     right: 0;
-    width: 5%;
+    width: 10%;
     height: 100%;
 
     background-color: transparent;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,12 +45,14 @@
 
 .nameContainer {
     height: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 
 .welcomeContainer {
     height: 100%;
-    width: 200vw;
+    width: 100vw;
 
     display: flex;
     justify-content: center;
@@ -62,21 +62,21 @@
 
 .welcomeTitle {
     color: white;
-    font-size: 5vw;
+    font-size: clamp(20px, 5vw, 40px);
 
     user-select: none;
 }
 
 .instructions {
     color: white;
-    font-size: 2vw;
+    font-size: clamp(15px, 2vw, 25px);
 
     user-select: none;
 }
 
 .instructionsMobile {
     color: white;
-    font-size: 1.5vw;
+    font-size: clamp(12px, 2vw, 22px);
 
     user-select: none;
 }
@@ -90,10 +90,12 @@ kbd {
     cursor: pointer;
 }
 
+/* About me */
+
 .aboutMeContainer {
     color: white;
     height: 100%;
-    width: 270vw;
+    width: 200vw;
     position: absolute;
     right: -140vw;
 
@@ -104,14 +106,14 @@ kbd {
 }
 
 .aboutMeImgContainer {
+    width: clamp(10vw, 300px, 20vw);
+    height: 30vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .aboutMeImg {
-    width: 30vw;
-    height: 30vw;
     border-radius: 50%;
 }
 
@@ -130,34 +132,20 @@ kbd {
 
 .aboutInformation {
     text-align: center;
-    font-size: 1.8vw;
+    font-size: clamp(10px, 1.8vw, 20px)
 }
 
 .aboutMeImg {
-    width: 30vw;
-    height: 30vw;
-}
-
-/* portal container */
-
-.portal {
-    width: 100px;
-    height: 100%;
-
-    position: absolute;
-    right: -60vw;
-
-    background-color: white;
-
-    clip-path: polygon(82% 0, 73% 16%, 76% 65%, 72% 83%, 93% 100%, 50% 100%, 24% 100%, 35% 74%, 48% 40%, 7% 0);
+    width: clamp(15vw, 30vw, 35vw);
+    height: clamp(15vw, 30vw, 35vw);
 }
 
 /* Projects */
 
 .mainProjectsContainer {
     position: absolute;
-    right: -200vw;
-    width: 130vw;
+    right: -210vw;
+    width: 110vw;
     height: 90%;
 
     display: flex;
@@ -167,12 +155,12 @@ kbd {
 }
 
 .mainProjectTitle {
-    font-size: 2vw;
+    font-size: clamp(20px, 5vw, 35px);
     color: white;
 }
 
 .projectsContainerOne {
-    font-size: 1.5vw;
+    font-size: clamp(7px, 2vw, 17px);
     color: #cacdc8;
     margin: 20px;
 
@@ -186,7 +174,21 @@ kbd {
 }
 
 .projectsContainerTwo {
-    font-size: 1.5vw;
+    font-size: clamp(7px, 2vw, 17px);
+    color: #cacdc8;
+    margin: 20px;
+
+    width: 130vw;
+    height: 100%;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.projectsContainerThree {
+    font-size: clamp(7px, 2vw, 17px);
     color: #cacdc8;
     margin: 20px;
 
@@ -209,12 +211,13 @@ kbd {
 
 .projectTitle {
     color: #fcfefb;
+    font-size: clamp(20px, 10vw, 30px);
 }
 
 .projectButton {
-    color: #cacdc8;
+    color: #67e528;
     text-align: center;
-    border: 1px solid #fcfefb;
+    border: 1px solid #67e528;
     border-radius: 10px;
     transition: transform 0.5s ease;
 
@@ -237,53 +240,41 @@ kbd {
 }
 
 .projectButton:hover {
-    color: #edf1eb;
+    color: #67e528;
     transform: scale(1.1);
     cursor: pointer;
 }
 
-/* Skills Container */
-
-.skillsContainer {
-    position: absolute;
-    right: -300vw;
-    width: 100vw;
-    height: 80%;
-
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    flex-direction: row;
-}
+/* Skills container styles */
 
 .skillsMainContainer {
-    width: 50vw;
-    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: -290vw;
+    width: 70vw;
+    height: 90%;
+}
+
+.skillsContainer {
+    width: 30vw;
+    height: 500px;
+
+    border: 0px solid white;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-start;
     flex-direction: column;
 }
 
-.skillsMainContainer p,
-h2 {
+.skillsTitle {
     color: white;
-}
-
-.skillsMainContainer p {
-    font-size: 1.5vw;
-    font-weight: bold;
-    color: #cacdc8;
-}
-
-.skillsMainContainer p:hover {
-    color: #fafcf8;
-}
-
-.skillsMainContainer h2 {
-    font-size: 2vw;
-    font-weight: bolder;
 }
 
 /* Contact me */
@@ -344,31 +335,11 @@ h2 {
 
 /* Media queries */
 
-@media (max-width: 425px) {
-    .skillsContainer {
-        position: absolute;
-        right: -400vw;
-        width: 100vw;
-        height: 80%;
-    }
 
+@media (max-width: 425px) {
     .contactMeContainer {
         width: 30vw;
         font-size: clamp(14px, 3vw, 18px)
-    }
-
-    .instructions {
-        font-size: 3vw;
-        margin-left: -10px;
-    }
-
-    .instructionsMobile {
-        margin-top: 50px;
-        font-size: 4vw;
-    }
-
-    .aboutInformation {
-        font-size: 1.5vw;
     }
 }
 
@@ -383,14 +354,40 @@ h2 {
     .projectInfo {
         font-size: clamp(11px, 1.8vw, 12px);
     }
-
-    .skillsContainer {
-        right: -350vw;
-    }
 }
 
 @media (max-width:920px) {
     .contactMeContainer {
         font-size: clamp(14px, 3vw, 18px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .skillsMainContainer {
+        right: -350vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .skillsMainContainer {
+        right: -390vw;
+    }
+}
+
+@media (max-width: 635px) {
+    .skillsMainContainer {
+        right: -450vw;
+    }
+}
+
+@media (max-width: 460px) {
+    .skillsMainContainer {
+        right: -550vw;
+    }
+}
+
+@media (max-width: 312px) {
+    .skillsMainContainer {
+        right: -580vw;
     }
 }

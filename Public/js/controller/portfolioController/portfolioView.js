@@ -1,5 +1,5 @@
 import { CONTACTME, DASHBLOCKS, LEFT, MEMORYGAME, PINGPONG, RIGHT, WANO } from "../../libraries/constants.js";
-import { div, h2, img, p } from "../../libraries/html.js";
+import { div, h2, i, img, p } from "../../libraries/html.js";
 import { ViewEnhanced } from "../../view/viewEnhanced.js";
 import { CharacterController } from "../character/characterController.js";
 
@@ -25,21 +25,20 @@ export class PortfolioView extends ViewEnhanced {
         /* About me information */
         this.aboutMeContainer = div(this.container, { className: 'aboutMeContainer' });
         this.aboutMeImgContainer = div(this.aboutMeContainer, { className: 'aboutMeImgContainer' });
-        this.aboutMeImg = img(this.aboutMeContainer, { className: 'aboutMeImg', src: './Public/assets/meReal.png' })
+        this.aboutMeImg = img(this.aboutMeImgContainer, { className: 'aboutMeImg', src: './Public/assets/meReal.png' })
         this.aboutMeTextContainer = div(this.aboutMeContainer, { className: 'aboutMeTextContainer' })
         this.welcomeMsg = div(this.aboutMeTextContainer, { className: 'welcomeMsg', textContent: 'Welcome' });
         this.aboutInformation = p(this.aboutMeTextContainer, { className: 'aboutInformation', innerHTML: `I'm a passionate developer based in Costa Rica <br> Someone who LOVES videogames, technology and science, I also <br> love One Piece and Bikes, but I won't tell you <br> more of my secrets.` });
 
-        /* portal */
-        this.portal = div(this.container, { className: 'portal' })
 
         /* projects */
 
         this.mainProjectsContainer = div(this.container, { className: 'mainProjectsContainer' });
-        this.mainProjectTitle = h2(this.mainProjectsContainer, { className: 'mainProjectTitle', textContent: 'These are some of my projects' });
+        this.mainProjectTitle = h2(this.mainProjectsContainer, { className: 'mainProjectTitle', textContent: 'My projects' });
 
         this.projectsContainerOne = div(this.mainProjectsContainer, { className: 'projectsContainerOne' });
         this.projectsContainerTwo = div(this.mainProjectsContainer, { className: 'projectsContainerTwo' });
+        this.projectsContainerThree = div(this.mainProjectsContainer, { className: 'projectsContainerThree' });
 
         this.dashBlocksContent = div(this.projectsContainerOne, { className: 'project' });
         this.dashBlocksTitle = p(this.dashBlocksContent, { className: 'projectTitle', textContent: 'Dash_Blocks' })
@@ -71,19 +70,41 @@ export class PortfolioView extends ViewEnhanced {
         this.billingSystemInfo = p(this.billingSystemContent, { className: 'projectInfo', innerHTML: `This is a billin system made for an English Academy. Generates invoices and manage the students` });
         this.billingSystemButton = div(this.billingSystemContent, { className: 'notAvailableBtn', textContent: 'Staff only' })
 
-        this.skillsMainContainer = div(this.container, { className: 'skillsContainer' });
+        this.serviceApp = div(this.projectsContainerThree, { className: 'project' });
+        this.serviceAppTitle = p(this.serviceApp, { className: 'projectTitle', textContent: 'MyService' });
+        this.serviceAppInfo = p(this.serviceApp, { className: 'projectInfo', innerHTML: 'This is a platform where you can publish the services that you offer' });
+        this.serviceAppButton = div(this.serviceApp, { className: 'projectButton', textContent: 'Visit', onclick: this.onWano.bind(this) });
 
-        this.skillsContainer = div(this.skillsMainContainer, { className: 'skillsMainContainer' });
-        this.javascript = p(this.skillsContainer, { innerHTML: 'Javascript' });
-        this.css = p(this.skillsContainer, { innerHTML: 'CSS' });
-        this.python = p(this.skillsContainer, { innerHTML: 'Python' });
-        this.nodeJs = p(this.skillsContainer, { innerHTML: 'Node Js' });
-        this.git = p(this.skillsContainer, { innerHTML: 'Git Version Control' });
-        this.skillsTitle = h2(this.skillsContainer, { className: 'skillsTitle', textContent: 'These are some of my skills' });
-        this.dataBases = p(this.skillsContainer, { innerHTML: 'SQL and NoSQL databases' });
-        this.figma = p(this.skillsContainer, { innerHTML: 'Figma' });
-        this.animate = p(this.skillsContainer, { innerHTML: 'Adobe Animate' });
-        this.photoshop = p(this.skillsContainer, { innerHTML: 'Photoshop' });
+        this.ticTacToe = div(this.projectsContainerThree, { className: 'project' });
+        this.ticTacToeTitle = p(this.ticTacToe, { className: 'projectTitle', textContent: 'TicTacToe' });
+        this.ticTacToeInfo = p(this.ticTacToe, { className: 'projectInfo', innerHTML: `This is a funny and classic TicTacToe` });
+        this.ticTacToeButton = div(this.ticTacToe, { className: 'notAvailableBtn', textContent: 'Staff only' })
+
+        /* Skill container */
+
+        this.mainSkillContainer = div(this.container, { className: 'skillsMainContainer' });
+        this.skillsContainer = div(this.mainSkillContainer, { className: 'skillsContainer' });
+        this.skill = h2(this.mainSkillContainer, { className: 'skillsTitle', textContent: 'My Skills' });
+
+        this.figma = img(this.skillsContainer, { src: 'https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white', className: 'imgSkills' })
+        this.AdobeAnimate = img(this.skillsContainer, { src: 'https://img.shields.io/badge/Adobe_Animate-%23F24E1E.svg?style=for-the-badge&logo=adobe&logoColor=white', className: 'imgSkills' })
+
+        this.AdobePhotoshop = img(this.skillsContainer, { src: 'https://img.shields.io/badge/Photoshop-%231572B6.svg?style=for-the-badge&logo=adobePhotoshop&logoColor=white', className: 'imgSkills' })
+        this.javascript = img(this.skillsContainer, { src: 'https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E', className: 'imgSkills' })
+
+        this.python = img(this.skillsContainer, { src: 'https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54', className: 'imgSkills' })
+        this.react = img(this.skillsContainer, { src: 'https://img.shields.io/badge/react-white?style=for-the-badge&logo=react&logoColor=lightBlue', className: 'imgSkills' })
+
+        this.NextJs = img(this.skillsContainer, { src: 'https://img.shields.io/badge/NextJs-black?style=for-the-badge&logo=NextJs&logoColor=transparent', className: 'imgSkills' })
+        this.nodeJs = img(this.skillsContainer, { src: 'https://img.shields.io/badge/NodeJs-gray?style=for-the-badge&logo=nodejs&logoColor=white', className: 'imgSkills' })
+
+        this.discordJs = img(this.skillsContainer, { textContent: 'discordJs', className: 'imgSkills' })
+        this.githubVs = img(this.skillsContainer, { src: 'https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white', className: 'imgSkills' })
+        this.gitVersionControl = img(this.skillsContainer, { src: 'https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white', className: 'imgSkills' })
+
+        this.bootstrap = img(this.skillsContainer, { src: 'https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white', className: 'imgSkills' });
+        this.tailwind = img(this.skillsContainer, { src: 'https://img.shields.io/badge/tailwind-white?style=for-the-badge&logo=tailwind&logoColor=blue', className: 'imgSkills' });
+        this.css = img(this.skillsContainer, { src: 'https://img.shields.io/badge/css-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white', className: 'imgSkills' });
 
         /* left and right button for mobiles to move from left to right and viceversa */
         this.leftButton = div(this.container, { className: 'leftButton', ontouchstart: this.onLeftButton.bind(this), ontouchend: this.upLeftButton.bind(this) })
