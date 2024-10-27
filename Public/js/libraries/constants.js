@@ -8,3 +8,5 @@ export const MEMORYGAME = 5;
 export const WANO = 6;
 
 export const CONTACTME = 7;
+export const SERVICEAPP = 8;
+export const TICTAC = 9;

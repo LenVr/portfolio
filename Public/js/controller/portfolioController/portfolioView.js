@@ -1,4 +1,4 @@
-import { CONTACTME, DASHBLOCKS, LEFT, MEMORYGAME, PINGPONG, RIGHT, WANO } from "../../libraries/constants.js";
+import { CONTACTME, DASHBLOCKS, LEFT, MEMORYGAME, PINGPONG, RIGHT, SERVICEAPP, TICTAC, WANO } from "../../libraries/constants.js";
 import { div, h2, i, img, p } from "../../libraries/html.js";
 import { ViewEnhanced } from "../../view/viewEnhanced.js";
 import { CharacterController } from "../character/characterController.js";
@@ -73,12 +73,12 @@ export class PortfolioView extends ViewEnhanced {
         this.serviceApp = div(this.projectsContainerThree, { className: 'project' });
         this.serviceAppTitle = p(this.serviceApp, { className: 'projectTitle', textContent: 'MyService' });
         this.serviceAppInfo = p(this.serviceApp, { className: 'projectInfo', innerHTML: 'This is a platform where you can publish the services that you offer' });
-        this.serviceAppButton = div(this.serviceApp, { className: 'projectButton', textContent: 'Visit', onclick: this.onWano.bind(this) });
+        this.serviceAppButton = div(this.serviceApp, { className: 'projectButton', textContent: 'Visit', onclick: this.onServiceApp.bind(this) });
 
         this.ticTacToe = div(this.projectsContainerThree, { className: 'project' });
         this.ticTacToeTitle = p(this.ticTacToe, { className: 'projectTitle', textContent: 'TicTacToe' });
         this.ticTacToeInfo = p(this.ticTacToe, { className: 'projectInfo', innerHTML: `This is a funny and classic TicTacToe` });
-        this.ticTacToeButton = div(this.ticTacToe, { className: 'notAvailableBtn', textContent: 'Staff only' })
+        this.ticTacToeButton = div(this.ticTacToe, { className: 'projectButton', textContent: 'Visit', onclick: this.onTicTac.bind(this) })
 
         /* Skill container */
 
@@ -178,6 +178,12 @@ export class PortfolioView extends ViewEnhanced {
     }
     onWano() {
         this.controller.appManager.onLinkButton(WANO)
+    }
+    onServiceApp() {
+        this.controller.appManager.onLinkButton(SERVICEAPP)
+    }
+    onTicTac() {
+        this.controller.appManager.onLinkButton(TICTAC)
     }
 
     showContactContainer(timer) {

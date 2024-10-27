@@ -1,6 +1,6 @@
 import { ContactMeController } from "./controller/contactMeController/contactMeController.js";
 import { PortfolioController } from "./controller/portfolioController/portfolioContainer.js";
-import { CONTACTME, DASHBLOCKS, MEMORYGAME, PINGPONG, WANO } from "./libraries/constants.js";
+import { CONTACTME, DASHBLOCKS, MEMORYGAME, PINGPONG, SERVICEAPP, TICTAC, WANO } from "./libraries/constants.js";
 import { div } from "./libraries/html.js"
 
 export class AppManager {
@@ -24,6 +24,12 @@ export class AppManager {
                 break;
             case WANO:
                 window.open('https://lenvr.github.io/WanoWeb/');
+                break;
+            case SERVICEAPP:
+                window.open('https://serviceapp-psi.vercel.app');
+                break;
+            case TICTAC:
+                window.open('https://lenvr.github.io/TicTacToe/');
                 break;
             default:
                 break;
