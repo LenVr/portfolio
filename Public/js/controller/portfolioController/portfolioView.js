@@ -72,12 +72,12 @@ export class PortfolioView extends ViewEnhanced {
 
         this.serviceApp = div(this.projectsContainerThree, { className: 'project' });
         this.serviceAppTitle = p(this.serviceApp, { className: 'projectTitle', textContent: 'MyService' });
-        this.serviceAppInfo = p(this.serviceApp, { className: 'projectInfo', innerHTML: 'This is a platform where you can publish the services that you offer' });
+        this.serviceAppInfo = p(this.serviceApp, { className: 'projectInfo', innerHTML: 'This is a platform where you can publish the services that you offer, it was <br> created using React, NextJs and Firebase.' });
         this.serviceAppButton = div(this.serviceApp, { className: 'projectButton', textContent: 'Visit', onclick: this.onServiceApp.bind(this) });
 
         this.ticTacToe = div(this.projectsContainerThree, { className: 'project' });
         this.ticTacToeTitle = p(this.ticTacToe, { className: 'projectTitle', textContent: 'TicTacToe' });
-        this.ticTacToeInfo = p(this.ticTacToe, { className: 'projectInfo', innerHTML: `This is a funny and classic TicTacToe` });
+        this.ticTacToeInfo = p(this.ticTacToe, { className: 'projectInfo', innerHTML: `This is a funny and classic TicTacToe that was created using JS, HTML and CSS, the online-multiplayer <br> version is coming soon.` });
         this.ticTacToeButton = div(this.ticTacToe, { className: 'projectButton', textContent: 'Visit', onclick: this.onTicTac.bind(this) })
 
         /* Skill container */
