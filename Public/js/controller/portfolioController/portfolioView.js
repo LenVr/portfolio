@@ -2,6 +2,7 @@ import { CONTACTME, DASHBLOCKS, LEFT, MEMORYGAME, PINGPONG, RIGHT, SERVICEAPP, T
 import { div, h2, i, img, p } from "../../libraries/html.js";
 import { ViewEnhanced } from "../../view/viewEnhanced.js";
 import { CharacterController } from "../character/characterController.js";
+import { ProfileContentController } from "../profileContent/profileContentController.js";
 
 export class PortfolioView extends ViewEnhanced {
     constructor(controller, parent) {
@@ -23,12 +24,7 @@ export class PortfolioView extends ViewEnhanced {
         this.instructionsMobile = p(this.welcomeContainer, { className: 'instructionsMobile' });
 
         /* About me information */
-        this.aboutMeContainer = div(this.container, { className: 'aboutMeContainer' });
-        this.aboutMeImgContainer = div(this.aboutMeContainer, { className: 'aboutMeImgContainer' });
-        this.aboutMeImg = img(this.aboutMeImgContainer, { className: 'aboutMeImg', src: './Public/assets/meReal.png' })
-        this.aboutMeTextContainer = div(this.aboutMeContainer, { className: 'aboutMeTextContainer' })
-        this.welcomeMsg = div(this.aboutMeTextContainer, { className: 'welcomeMsg', textContent: 'Welcome' });
-        this.aboutInformation = p(this.aboutMeTextContainer, { className: 'aboutInformation', innerHTML: `I'm a passionate developer based in Costa Rica <br> Someone who LOVES videogames, technology and science, I also <br> love One Piece and Bikes, but I won't tell you <br> more of my secrets.` });
+        this.aboutInformation = new ProfileContentController(this, this.container);
 
 
         /* projects */

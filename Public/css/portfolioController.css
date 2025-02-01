@@ -90,55 +90,8 @@ kbd {
     cursor: pointer;
 }
 
-/* About me */
-
-.aboutMeContainer {
-    color: white;
-    height: 100%;
-    width: 200vw;
-    position: absolute;
-    right: -140vw;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-
-.aboutMeImgContainer {
-    width: clamp(10vw, 300px, 20vw);
-    height: 30vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.aboutMeImg {
-    border-radius: 50%;
-}
-
-.welcomeMsg {
-    color: white;
-    font-size: 8vw;
-}
-
-.aboutMeTextContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 
-.aboutInformation {
-    text-align: center;
-    font-size: clamp(10px, 1.8vw, 20px)
-}
-
-.aboutMeImg {
-    width: clamp(15vw, 30vw, 35vw);
-    height: clamp(15vw, 30vw, 35vw);
-}
 
 /* Projects */
 
