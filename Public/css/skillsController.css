@@ -1,0 +1,67 @@
+.skillsController {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+}
+
+/* Skills container styles */
+
+.skillsMainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: -290vw;
+    width: 70vw;
+    height: 90%;
+}
+
+.skillsContainer {
+    width: 30vw;
+    height: 500px;
+
+    border: 0px solid white;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.skillsTitle {
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .skillsMainContainer {
+        right: -350vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .skillsMainContainer {
+        right: -390vw;
+    }
+}
+
+@media (max-width: 635px) {
+    .skillsMainContainer {
+        right: -450vw;
+    }
+}
+
+@media (max-width: 460px) {
+    .skillsMainContainer {
+        right: -550vw;
+    }
+}
+
+@media (max-width: 312px) {
+    .skillsMainContainer {
+        right: -580vw;
+    }
+}
