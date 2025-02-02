@@ -3,6 +3,7 @@ import { div, h2, i, img, p } from "../../libraries/html.js";
 import { ViewEnhanced } from "../../view/viewEnhanced.js";
 import { CharacterController } from "../character/characterController.js";
 import { ProfileContentController } from "../profileContent/profileContentController.js";
+import { ServicesController } from "../servicesController/serviceController.js";
 import { SkillsController } from "../skillsController/skillsController.js";
 
 export class PortfolioView extends ViewEnhanced {
@@ -80,6 +81,10 @@ export class PortfolioView extends ViewEnhanced {
         /* Skill container */
 
         this.skills = new SkillsController(this, this.container);
+
+        /* My services offered */
+
+        this.servicesOffered = new ServicesController(this, this.container);
 
         /* left and right button for mobiles to move from left to right and viceversa */
         this.leftButton = div(this.container, { className: 'leftButton', ontouchstart: this.onLeftButton.bind(this), ontouchend: this.upLeftButton.bind(this) })
