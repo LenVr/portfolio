@@ -32,5 +32,41 @@
 }
 
 .services {
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+@media (max-width: 1200px) {
+    .contentContainer {
+        right: -420vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .contentContainer {
+        right: -470vw;
+    }
+}
+
+@media (max-width: 635px) {
+    .contentContainer {
+        right: -550vw;
+    }
+}
+
+@media (max-width: 460px) {
+    .contentContainer {
+        right: -650vw;
+    }
+}
+
+@media (max-width: 312px) {
+    .contentContainer {
+        right: -750vw;
+    }
+}
+
+@media (max-width: 320px) {
+    .contentContainer {
+        right: -740vw;
+    }
 }

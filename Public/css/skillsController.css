@@ -65,3 +65,9 @@
         right: -580vw;
     }
 }
+
+@media (max-width: 320px) {
+    .skillsMainContainer {
+        right: -600vw;
+    }
+}
