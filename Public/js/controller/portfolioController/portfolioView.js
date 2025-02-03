@@ -90,12 +90,33 @@ export class PortfolioView extends ViewEnhanced {
         this.leftButton = div(this.container, { className: 'leftButton', ontouchstart: this.onLeftButton.bind(this), ontouchend: this.upLeftButton.bind(this) })
         this.rightButton = div(this.container, { className: 'rightButton', ontouchstart: this.onRightButton.bind(this), ontouchend: this.upRightButton.bind(this) })
 
+        /* Languages btns */
+
+        this.languageContainer = div(this.container, { className: 'languageContainer' });
+        this.englishButton = div(this.languageContainer, { className: 'lngBtn', textContent: 'English', onclick: () => this.setLanguage('en') });
+        this.spanishButton = div(this.languageContainer, { className: 'lngBtn', textContent: 'Español', onclick: () => this.setLanguage('es') });
+
         this.contactMeController = null;
 
 
+        this.language = 'en';
+        this.phrases = {
+            en: {
+                welcome: "Hi! I'm Len :)",
+                instructions: 'Press <kbd>A</kbd> or <kbd>D</kbd> to move',
+                instructionsMobile: 'If you are in a mobile, touch the border left or right'
+            },
+            es: {
+                welcome: '¡Hola! Soy Len :)',
+                instructions: 'Presiona <kbd>A</kbd> o <kbd>D</kbd> para moverte',
+                instructionsMobile: 'Si estás en un móvil, toca el borde izquierdo o derecho'
+            }
+        };
+
+        this.index = 0;
         this.writing = true;
-        this.index = 0
-        setInterval(() => this.writer(), 250);
+        this.writer();
+        setInterval(() => this.writer(), 5000);
     }
 
     movementRightHandler() {
@@ -107,20 +128,23 @@ export class PortfolioView extends ViewEnhanced {
     }
 
     writer() {
-        let phrase = `Hi! I'm Len :)`;
+        let phrase = this.phrases[this.language].welcome;
         if (this.writing) {
             if (this.index < phrase.length) {
                 this.welcomeTitle.textContent += phrase[this.index];
                 this.index++;
+                setTimeout(() => this.writer(), 250);
             } else {
                 this.writing = false;
+                this.instructions.innerHTML = this.phrases[this.language].instructions;
+                this.instructionsMobile.innerHTML = this.phrases[this.language].instructionsMobile;
             }
         } else {
             this.welcomeTitle.textContent = '';
             this.index = 0;
             this.writing = true;
-            this.instructions.innerHTML = 'Press <kbd>A</kbd> or <kbd>D</kbd> to move';
-            this.instructionsMobile.innerHTML = 'If you are in a mobile, touch the border left or right'
+            this.instructions.innerHTML = this.phrases[this.language].instructions;
+            this.instructionsMobile.innerHTML = this.phrases[this.language].instructionsMobile;
         }
     }
 
@@ -172,5 +196,23 @@ export class PortfolioView extends ViewEnhanced {
 
     onContactMeBtn() {
         this.controller.appManager.showController(CONTACTME)
+    }
+
+    setLanguage(language) {
+        this.language = language;
+        this.index = 0;
+        this.writing = true;
+        this.welcomeTitle.textContent = '';
+        this.writer();
+
+        const elements = this.container.querySelectorAll('[data-en]');
+        elements.forEach(element => {
+            element.textContent = element.getAttribute(`data-${language}`);
+        });
+
+        // Propagar el cambio de idioma a los controladores instanciados
+        /* this.character.setLanguage(language);
+        this.aboutInformation.setLanguage(language); */
+        // Agregar otros controladores si es necesario
     }
 }

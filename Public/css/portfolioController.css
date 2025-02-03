@@ -227,6 +227,34 @@ kbd {
     animation: show 2s ease forwards;
 }
 
+/* languages btns */
+
+.languageContainer {
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
+
+.lngBtn {
+    margin: 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    width: 5vw;
+    text-align: center;
+}
+
+.lngBtn:hover {
+    cursor: pointer;
+}
+
 @keyframes show {
     0% {
         left: -90vw;
