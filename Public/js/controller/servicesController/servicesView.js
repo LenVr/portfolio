@@ -10,9 +10,9 @@ export class ServiceView extends ViewEnhanced {
         this.title = h2(this.contentContainer, { className: 'title', textContent: 'My Services' });
         this.servicesContainer = div(this.contentContainer, { className: 'servicesContainer' });
         this.service = p(this.servicesContainer, { className: 'service', textContent: 'Web development and design' });
-        this.service = p(this.servicesContainer, { className: 'service', textContent: 'Diseño UI/UX' });
-        this.service = p(this.servicesContainer, { className: 'service', textContent: 'Mantenimiento web' });
-        this.service = p(this.servicesContainer, { className: 'service', textContent: 'Optimización SEO' });
+        this.service = p(this.servicesContainer, { className: 'service', textContent: 'UI/UX Design' });
+        this.service = p(this.servicesContainer, { className: 'service', textContent: 'Web maintenance' });
+        this.service = p(this.servicesContainer, { className: 'service', textContent: 'SEO Optimization' });
 
     }
 }
