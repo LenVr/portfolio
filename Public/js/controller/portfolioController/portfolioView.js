@@ -3,7 +3,6 @@ import { div, h2, i, img, p } from "../../libraries/html.js";
 import { ViewEnhanced } from "../../view/viewEnhanced.js";
 import { CharacterController } from "../character/characterController.js";
 import { ProfileContentController } from "../profileContent/profileContentController.js";
-import { ServicesController } from "../servicesController/serviceController.js";
 import { SkillsController } from "../skillsController/skillsController.js";
 
 export class PortfolioView extends ViewEnhanced {
@@ -65,7 +64,7 @@ export class PortfolioView extends ViewEnhanced {
 
         this.billingSystemContent = div(this.projectsContainerTwo, { className: 'project' });
         this.billingSystemTitle = p(this.billingSystemContent, { className: 'projectTitle', textContent: 'Billing System' });
-        this.billingSystemInfo = p(this.billingSystemContent, { className: 'projectInfo', innerHTML: `This is a billin system made for an English Academy. Generates invoices and manage the students` });
+        this.billingSystemInfo = p(this.billingSystemContent, { className: 'projectInfo', innerHTML: `This is a billing system made for an English Academy. Generates invoices and manage the students` });
         this.billingSystemButton = div(this.billingSystemContent, { className: 'notAvailableBtn', textContent: 'Staff only' })
 
         this.serviceApp = div(this.projectsContainerThree, { className: 'project' });
@@ -87,11 +86,6 @@ export class PortfolioView extends ViewEnhanced {
         this.leftButton = div(this.container, { className: 'leftButton', ontouchstart: this.onLeftButton.bind(this), ontouchend: this.upLeftButton.bind(this) })
         this.rightButton = div(this.container, { className: 'rightButton', ontouchstart: this.onRightButton.bind(this), ontouchend: this.upRightButton.bind(this) })
 
-        /* Languages btns */
-
-        this.languageContainer = div(this.container, { className: 'languageContainer' });
-        this.englishButton = div(this.languageContainer, { className: 'lngBtn', textContent: 'English', onclick: () => this.setLanguage('en') });
-        this.spanishButton = div(this.languageContainer, { className: 'lngBtn', textContent: 'Español', onclick: () => this.setLanguage('es') });
 
         this.contactMeController = null;
 
