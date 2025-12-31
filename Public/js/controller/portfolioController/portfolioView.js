@@ -12,7 +12,7 @@ export class PortfolioView extends ViewEnhanced {
 
         this.container.className = 'portfolioController';
         this.character = new CharacterController(this, this.container);
-        this.scrollAmount = 25;
+        this.scrollAmount = 25
 
         /* Div to style cursos */
         this.cursor = div(this.container, { className: 'cursor' })
@@ -82,9 +82,6 @@ export class PortfolioView extends ViewEnhanced {
 
         this.skills = new SkillsController(this, this.container);
 
-        /* My services offered */
-
-        this.servicesOffered = new ServicesController(this, this.container);
 
         /* left and right button for mobiles to move from left to right and viceversa */
         this.leftButton = div(this.container, { className: 'leftButton', ontouchstart: this.onLeftButton.bind(this), ontouchend: this.upLeftButton.bind(this) })
@@ -102,12 +99,12 @@ export class PortfolioView extends ViewEnhanced {
         this.language = 'en';
         this.phrases = {
             en: {
-                welcome: "Hi! I'm Len :)",
+                welcome: "Hi! I'm Brandon Len :)",
                 instructions: 'Press <kbd>A</kbd> or <kbd>D</kbd> to move',
                 instructionsMobile: 'If you are in a mobile, touch the border left or right'
             },
             es: {
-                welcome: '¡Hola! Soy Len :)',
+                welcome: '¡Hola! Soy Brandon Len :)',
                 instructions: 'Presiona <kbd>A</kbd> o <kbd>D</kbd> para moverte',
                 instructionsMobile: 'Si estás en un móvil, toca el borde izquierdo o derecho'
             }
