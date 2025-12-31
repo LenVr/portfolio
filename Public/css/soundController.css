@@ -1,0 +1,33 @@
+.soundPortalContainerL {
+    max-width: 100px;
+    height: 100px;
+    position: absolute;
+
+    bottom: 105px;
+    left: 20vw;
+
+}
+
+.soundPortalContainerR {
+    max-width: 100px;
+    height: 100px;
+    position: absolute;
+
+    bottom: 105px;
+    left: 20vw;
+
+}
+
+.soundLeftSide {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(198, 6, 228, 0.7));
+}
+
+.soundRightSide {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 50px rgba(198, 6, 228, 0.7));
+}

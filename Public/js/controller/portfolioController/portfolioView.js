@@ -4,13 +4,17 @@ import { ViewEnhanced } from "../../view/viewEnhanced.js";
 import { CharacterController } from "../character/characterController.js";
 import { ProfileContentController } from "../profileContent/profileContentController.js";
 import { SkillsController } from "../skillsController/skillsController.js";
+import { SoundController } from "../soundController/soundController.js";
+import { SoundControllerR } from "../soundController/soundControllerR.js";
 
 export class PortfolioView extends ViewEnhanced {
     constructor(controller, parent) {
         super(controller, parent);
 
         this.container.className = 'portfolioController';
+        this.soundPortal = new SoundController(this, this.container)
         this.character = new CharacterController(this, this.container);
+        this.soundPortalR = new SoundControllerR(this, this.container)
         this.scrollAmount = 25
 
         /* Div to style cursos */

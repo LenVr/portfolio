@@ -5,7 +5,7 @@
     background-color: black;
 
     position: fixed;
-    overflow-x: hidden;
+    overflow-x: scroll;
     white-space: nowrap;
 
     display: flex;
